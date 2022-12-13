@@ -4,7 +4,8 @@
 ## 專案說明
 - 討厭詭圖鑑是一個line聊天機器人，透過觀察真假訊息，從中找出相關的語言學特徵。
 <img src="https://user-images.githubusercontent.com/116346920/207036936-4c281ef3-05a9-4421-89b9-31ff8bb25057.gif" width=30%>
-![image](https://user-images.githubusercontent.com/116346920/207417220-a0855683-4435-4c8d-b679-0517aa801e7d.png)
+<img src="https://user-images.githubusercontent.com/116346920/207417220-a0855683-4435-4c8d-b679-0517aa801e7d.png" width=30%>
+
 
 
 
