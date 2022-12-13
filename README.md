@@ -22,7 +22,8 @@
 
 
 - 機器人回應主程式```app.py```
-	- ```app.py```需登入LINE developers填入channel access token和channel secret。<br>
+	- ```app.py```需登入LINE developers取得channel access token和channel secret，並填入```app.py```對應欄位，已獲得存取request的權限。
+<br>
 	```python=
 	# Channel Access Token
 	line_bot_api = LineBotApi('ChannelAccessToken')
