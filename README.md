@@ -29,17 +29,18 @@
 - 機器人回應主程式```app.py```
 	- ```app.py```需登入LINE developers取得channel access token和channel secret後，填入```app.py```對應欄位，以獲得存取request的權限。
 
-[LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)
-<br>
 
-	```
+<br>
+	
 	# Channel Access Token
 	line_bot_api = LineBotApi('ChannelAccessToken')
 	# Channel Secret
 	handler = WebhookHandler('ChannelSecret')
-	```
-\n
-	- 由關鍵字觸發對應之函式，推進機器人的訊息推播。
+	
+[LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)
+
+
+
 
 
 ## 架設平台
