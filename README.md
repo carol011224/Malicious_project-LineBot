@@ -41,7 +41,9 @@
 
 
 ## 架設平台
-討厭詭圖鑑使用fly.io免付費方案，作為機器人的伺服器。
+- 討厭詭圖鑑使用fly.io免付費方案，作為機器人的伺服器。
+- 伺服器教學請參考以下連結：
+[從Heroku無痛轉移到fly.io，輕鬆部署Python Web專案｜5分鐘學會｜程式設計｜Python｜fly.io部署｜LINEBOT](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)
 
 
 
