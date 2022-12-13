@@ -10,9 +10,32 @@
 
 ## 檔案總覽
 
-├── Procfile              # 
+├── Procfile              # 定義機器人的運行程序
 ├── README.md                  
-├── app.py                # 機器人回應函式集  
+├── app.py                # 機器人回應主程式  
 └── requirements.txt      # 需求套件
 
-##
+## 檔案說明
+- 定義機器人的運行程序 ```procfile``` 
+```web: gunicorn py檔名稱:app```
+指定gunicorny作為接口，同時開啟多的workers，將用戶送出的request，分流發送給機器人，並能在單個worker無法運作時，自動透過其他worker發送request，以確保運行順暢。
+
+
+- 機器人回應主程式```app.py```
+	- ```app.py```需登入LINE developers填入channel access token和channel secret
+	```python=
+	# Channel Access Token
+	line_bot_api = LineBotApi('ChannelAccessToken')
+	# Channel Secret
+	handler = WebhookHandler('ChannelSecret')
+	```
+	- 由關鍵字觸發對應之函式，推進機器人的訊息推播。
+
+
+## 架設平台
+討厭詭圖鑑使用fly.io免付費方案，作為機器人的伺服器。
+
+
+
+
+
