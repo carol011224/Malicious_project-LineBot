@@ -22,7 +22,7 @@
 
 
 - 機器人回應主程式```app.py```
-	- ```app.py```需登入LINE developers填入channel access token和channel secret
+	- ```app.py```需登入LINE developers填入channel access token和channel secret。<br>
 	```python=
 	# Channel Access Token
 	line_bot_api = LineBotApi('ChannelAccessToken')
