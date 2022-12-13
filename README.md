@@ -31,7 +31,8 @@
 	# Channel Secret
 	handler = WebhookHandler('ChannelSecret')
 	```
-<br>	- 由關鍵字觸發對應之函式，推進機器人的訊息推播。
+<br>	
+	- 由關鍵字觸發對應之函式，推進機器人的訊息推播。
 
 
 ## 架設平台
