@@ -45,7 +45,7 @@
 
 ## 架設平台
 - 由於heroku於2022/11/28取消免付費方案，本專案將伺服器轉移至fly.io，使用免付費方案，作為機器人的伺服器。
-- 伺服器教學請參考以下連結：
+- 伺服器部署教學請參考以下連結：
 
 [從Heroku無痛轉移到fly.io，輕鬆部署Python Web專案｜5分鐘學會｜程式設計｜Python｜fly.io部署｜LINEBOT](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)
 
