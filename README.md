@@ -22,7 +22,7 @@
 
 
 - 機器人回應主程式```app.py```
-	- ```app.py```需登入LINE developers取得channel access token和channel secret，並填入```app.py```對應欄位，已獲得存取request的權限。
+	- ```app.py```需登入LINE developers取得channel access token和channel secret後，填入```app.py```對應欄位，以獲得存取request的權限。
 <br>
 
 	```
@@ -32,7 +32,7 @@
 	handler = WebhookHandler('ChannelSecret')
 	```
 	
-	- 由關鍵字觸發對應之函式，推進機器人的訊息推播。
+- 由關鍵字觸發對應之函式，推進機器人的訊息推播。
 
 
 ## 架設平台
