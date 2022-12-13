@@ -17,7 +17,7 @@
 
 ## 檔案說明
 - 定義機器人的運行程序 ```procfile``` <br>
-```web: gunicorn py檔名稱:app```
+```web: gunicorn py檔名稱:app```<br>
 指定gunicorny作為接口，同時開啟多的workers，將用戶送出的request，分流發送給機器人，並能在單個worker無法運作時，自動透過其他worker發送request，以確保運行順暢。
 
 
