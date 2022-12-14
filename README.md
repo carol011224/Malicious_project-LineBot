@@ -37,7 +37,7 @@ handler = WebhookHandler('ChannelSecret')
 ```
 
 	
-[LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)
+- [LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)
 
 
 
@@ -45,9 +45,12 @@ handler = WebhookHandler('ChannelSecret')
 
 ## 架設平台
 - 由於heroku於2022/11/28取消免付費方案，本專案將伺服器轉移至fly.io，使用免付費方案，作為機器人的伺服器。
-- 伺服器部署教學請參考以下連結：
 
-[從Heroku無痛轉移到fly.io，輕鬆部署Python Web專案｜5分鐘學會｜程式設計｜Python｜fly.io部署｜LINEBOT](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)
+## 相關專案
+- 伺服器部署教學請參考以下連結：
+[yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)
+(雖然這個專案介紹的是heroku的做法，但其中也包含了LINE developers及LINE訊息物件的介紹，伺服器則可以根據[從Heroku無痛轉移到fly.io，輕鬆部署Python Web專案｜5分鐘學會｜程式設計｜Python｜fly.io部署｜LINEBOT](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)的作法架設。)
+
 
 
 
