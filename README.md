@@ -45,8 +45,8 @@ handler = WebhookHandler('ChannelSecret')
 
 
 
-## 架設平台
-- 由於heroku於2022/11/28取消免付費方案，本專案將伺服器轉移至[fly.io](https://fly.io/)，使用免付費方案，作為機器人的伺服器。
+## 伺服器
+- 由於heroku於2022/11/28取消免付費方案，本專案將機器人轉移至[fly.io](https://fly.io/)，使用免付費方案，作為機器人的伺服器。
 
 ## 相關專案
 
