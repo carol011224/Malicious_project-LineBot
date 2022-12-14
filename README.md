@@ -13,10 +13,10 @@
 
 ## 檔案總覽
 
-├── Procfile　　　　　　　　 # 定義機器人的運行程序
-├── README.md                  
-├── app.py　　　　　　　　　 # 機器人回應主程式  
-└── requirements.txt　　　　# 需求套件
+├── Procfile                # 定義機器人的運行程序
+├── README.md               # 專案說明  
+├── app.py                  # 機器人回應主程式  
+└── requirements.txt        # 需求套件
 
 ## 檔案說明
 -  ```procfile``` :定義機器人的運行程序
