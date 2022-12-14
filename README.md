@@ -49,6 +49,7 @@ handler = WebhookHandler('ChannelSecret')
 ## 相關專案
 - 伺服器部署教學請參考以下連結：
 [yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)
+
 (雖然這個專案介紹的是heroku的做法，但其中也包含了LINE developers及LINE訊息物件的介紹，伺服器則可以根據[從Heroku無痛轉移到fly.io，輕鬆部署Python Web專案｜5分鐘學會｜程式設計｜Python｜fly.io部署｜LINEBOT](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)的作法架設。)
 
 
