@@ -13,20 +13,21 @@
 
 ## 檔案總覽
 
-├── Procfile　　　　　　　　 # 定義機器人的運行程序<br>
+├── Procfile　　　　　　　　 # 定義機器人的運行程序
 ├── README.md                  
 ├── app.py　　　　　　　　　 # 機器人回應主程式  
 └── requirements.txt　　　　# 需求套件
 
 ## 檔案說明
-- 定義機器人的運行程序 ```procfile``` <br>
-```web: gunicorn py檔名稱:app```<br>
+-  ```procfile``` :定義機器人的運行程序
+
+```web: gunicorn py檔名稱:app```
+
 指定gunicorny作為接口，同時開啟多的workers，將用戶送出的request，分流發送給機器人，並能在單個worker無法運作時，自動透過其他worker發送request，以確保運行順暢。
 
 
-- 機器人回應主程式```app.py```
-	- ```app.py```需登入LINE developers取得channel access token和channel secret後，填入```app.py```對應欄位，以獲得存取request的權限。
-
+- ```app.py``` :機器人回應主程式
+	- ```app.py```需登入[LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)取得channel access token和channel secret後，填入```app.py```對應欄位，以獲得存取request的權限。
 
 
 ```
@@ -37,20 +38,21 @@ handler = WebhookHandler('ChannelSecret')
 ```
 
 	
-- [LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)
 
+- ```requirements.txt``` :機器人需要安裝的套件
+	- 伺服器會根據文件中所列，安裝相對應的套件。
 
 
 
 
 ## 架設平台
-- 由於heroku於2022/11/28取消免付費方案，本專案將伺服器轉移至fly.io，使用免付費方案，作為機器人的伺服器。
+- 由於heroku於2022/11/28取消免付費方案，本專案將伺服器轉移至[fly.io](https://fly.io/)，使用免付費方案，作為機器人的伺服器。
 
 ## 相關專案
-- 伺服器部署教學請參考以下連結：
+
 [yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)
 
-(雖然這個專案介紹的是heroku的做法，但其中也包含了LINE developers及LINE訊息物件的介紹，伺服器則可以根據[這個影片](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)的作法架設。)
+（雖然這個專案介紹的是heroku的做法，但其中也包含了LINE developers及LINE訊息物件的介紹，新增LINE官方帳號及```app.py```的編寫方式可以參考這邊的作法，伺服器則可以根據[這個影片](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)的作法架設。）
 
 
 
