@@ -29,12 +29,12 @@
 
 
 <br>
-	```
-	# Channel Access Token
-	line_bot_api = LineBotApi('ChannelAccessToken')
-	# Channel Secret
-	handler = WebhookHandler('ChannelSecret')
-	```
+```
+# Channel Access Token
+line_bot_api = LineBotApi('ChannelAccessToken')
+# Channel Secret
+handler = WebhookHandler('ChannelSecret')
+```
 <br>	
 	
 [LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api)
