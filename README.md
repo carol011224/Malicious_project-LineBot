@@ -50,7 +50,7 @@ handler = WebhookHandler('ChannelSecret')
 
 ## 相關專案
 
-[yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)
+- [yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)
 
 （雖然這個專案介紹的是heroku的做法，但其中也包含了LINE developers及LINE訊息物件的介紹，新增LINE官方帳號及```app.py```的編寫方式可以參考這邊的作法，伺服器則可以根據[這個影片](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)的作法架設。）
 
