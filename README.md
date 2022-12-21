@@ -29,6 +29,7 @@
 - `app.py` ：機器人主程式
 	- 登入 [LINE developers](https://account.line.biz/login?redirectUri=https%3A%2F%2Fdevelopers.line.biz%2Fconsole%2Fchannel%2Fnew%3Ftype%3Dmessaging-api) 取得 Channel Access Token 和 Channel Secret 後，填入`app.py`對應欄位，以獲得存取 request 的權限。
 
+- 機器人訊息的模板及 LINE developers 可以參考[yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)的作法。
 
 ```py
 # Channel Access Token
@@ -47,13 +48,12 @@ flask
 gunicorn
 ```
 
+## 伺服器架設
+
+- 我們選用fly.io做為機器人的架設平台，架設的方式可以參考[這個影片](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)
 
 
-## 參考來源 
 
-
-- LINE developers 及 LINE 訊息物件的介紹：[yaoandy107/line-bot-tutorial](https://github.com/yaoandy107/line-bot-tutorial)
-- fly.io 部署教學：[從Heroku無痛轉移到fly.io，輕鬆部署Python Web專案｜5分鐘學會｜程式設計｜Python｜fly.io部署｜LINEBOT](https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B)
 
 
 
