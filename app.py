@@ -36,78 +36,91 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 
-def prettyEcho0(event):
-    input_string = event.message.text
-    if "開始挑戰" in input_string:
+'''
+SetStart()觸發
+'''
+def SetStart(event):
+    inputSTR = event.message.text
+    if "開始挑戰" in inputSTR:
         message = startaction()
-    elif "第一題" in input_string:
-        message = prettyEcho1(input_string)
-    elif "第二題" in input_string:
-        message = prettyEcho2(input_string)
-    elif "第三題" in input_string:
-        message = prettyEcho3(input_string)
+    elif "第一題" in inputSTR:
+        message = First(inputSTR)
+    elif "第二題" in inputSTR:
+        message = Second(inputSTR)
+    elif "第三題" in inputSTR:
+        message = Third(inputSTR)
     line_bot_api.reply_message(event.reply_token, message)
 
-def prettyEcho1(input_string):
-    #input_string=event.message.text
+'''
+First()、Second()、Third()
+'''
 
-    if "第一題答對！！" in input_string:
-        message = corr_answer()        
-    elif "第一題答錯嗚嗚..." in input_string:
-        message = incorr_answer()    
-    elif "第一題的討厭詭在哪裡咧？！" in input_string:
-        message = feat()
-    elif "我覺得第一題的討厭詭是 A C D E" in input_string:
-        message = feat_corr()
-    elif "我覺得第一題的討厭詭是" in input_string:
-        message = feat_incorr()    
-    elif "第一題的討厭詭快現形吧！" in input_string:
-        message = explain()
-    elif "第一題結束～～再玩一題" in input_string:
+def First(inputSTR):
+    #inputSTR=event.message.text
+
+    if "第一題答對！！" in inputSTR:
+        message = corr_answer1()        
+    elif "第一題答錯嗚嗚..." in inputSTR:
+        message = incorr_answer1()    
+    elif "第一題的討厭詭在哪裡咧？！" in inputSTR:
+        message = feat1()
+    elif "我覺得第一題的討厭詭是 A C D E" in inputSTR:
+        message = feat_corr1()
+    elif "我覺得第一題的討厭詭是" in inputSTR:
+        message = feat_incorr1()    
+    elif "第一題的討厭詭快現形吧！" in inputSTR:
+        message = explain1()
+    elif "第一題結束～～再玩一題" in inputSTR:
         message = news2()
     #line_bot_api.reply_message(event.reply_token, message)
     return message
 
-def prettyEcho2(input_string):
-    #input_string=event.message.text
+
+
+def Second(inputSTR):
+    #inputSTR=event.message.text
     
-    if "第二題答對！！" in input_string:
+    if "第二題答對！！" in inputSTR:
         message = corr_answer2()
-    elif "第二題答錯嗚嗚..." in input_string:
+    elif "第二題答錯嗚嗚..." in inputSTR:
         message = incorr_answer2()    
-    elif "第二題的討厭詭在哪裡咧？！" in input_string:
+    elif "第二題的討厭詭在哪裡咧？！" in inputSTR:
         message = feat2()
-    elif "我猜第二題的討厭詭是 B C D" in input_string:
+    elif "我猜第二題的討厭詭是 B C D" in inputSTR:
         message = feat_corr2()
-    elif "我猜第二題的討厭詭是" in input_string:
+    elif "我猜第二題的討厭詭是" in inputSTR:
         message = feat_incorr2()    
-    elif "第二題的討厭詭還不現形啊！" in input_string:
+    elif "第二題的討厭詭還不現形啊！" in inputSTR:
         message = explain2()
-    elif "第二題結束～～再玩一題" in input_string:
+    elif "第二題結束～～再玩一題" in inputSTR:
         message = news3()
     #line_bot_api.reply_message(event.reply_token, message)
     return message
 
-def prettyEcho3(input_string):
-    #input_string=event.message.text
+
+def Third(inputSTR):
+    #inputSTR=event.message.text
     
-    if "第三題答對！！" in input_string:
+    if "第三題答對！！" in inputSTR:
         message = corr_answer3()
-    elif "第三題答錯嗚嗚..." in input_string:
+    elif "第三題答錯嗚嗚..." in inputSTR:
         message = incorr_answer3()    
-    elif "第三題的討厭詭在哪裡咧？！" in input_string:
+    elif "第三題的討厭詭在哪裡咧？！" in inputSTR:
         message = feat3()
-    elif "第三題的討厭詭應該是 A B C E" in input_string:
+    elif "第三題的討厭詭應該是 A B C E" in inputSTR:
         message = feat_corr3()
-    elif "第三題的討厭詭應該是" in input_string:
+    elif "第三題的討厭詭應該是" in inputSTR:
         message = feat_incorr3()    
-    elif "出來吧！第三題的討厭詭" in input_string:
+    elif "出來吧！第三題的討厭詭" in inputSTR:
         message = explain3()   
-    else:
-        message = TextSendMessage(text="很抱歉...我聽不懂啊～～")
     return message
 
+
 #start 
+'''
+startaction()
+newsN()，N是2-3
+'''
 def startaction():
     reply_arr=[]
     reply_arr.append(TextSendMessage(text='蒐集討厭詭的任務即將開始！！\n任務內容：破解三題假新聞並仔細尋找哪些句子藏有假訊息的特徵。\n抓出討厭詭的任務就交給你了💪💪'))
@@ -178,6 +191,8 @@ def news2():
     )
     return newsMSG
 
+
+
 def news3():
     newsMSG = TemplateSendMessage(
         alt_text='Carousel template',
@@ -210,8 +225,15 @@ def news3():
     )
     return newsMSG
 
+
+
 #correct answer
-def corr_answer():
+
+'''
+corr_answerN()，這裡的N是1-3
+'''
+
+def corr_answer1():
     corr_answerMSG = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -226,6 +248,8 @@ def corr_answer():
         )
     )
     return corr_answerMSG
+
+
 
 def corr_answer2():
     corr_answerMSG = TemplateSendMessage(
@@ -243,6 +267,8 @@ def corr_answer2():
     )
     return corr_answerMSG
 
+
+
 def corr_answer3():
     corr_answerMSG = TemplateSendMessage(
         alt_text='Buttons template',
@@ -259,8 +285,15 @@ def corr_answer3():
     )
     return corr_answerMSG
 
+
+
 #incorrect answer
-def incorr_answer():
+
+'''
+incorr_answerN()，這裡的N是1-3
+'''
+
+def incorr_answer1():
     incorr_answerMSG = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -275,6 +308,8 @@ def incorr_answer():
         )
     )
     return incorr_answerMSG
+
+
 
 def incorr_answer2():
     incorr_answerMSG = TemplateSendMessage(
@@ -309,7 +344,10 @@ def incorr_answer3():
     return incorr_answerMSG
 
 #feature
-def feat():
+'''
+featN()，N是1-3
+'''
+def feat1():
     feat_MSG = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -383,7 +421,10 @@ def feat3():
 
 
 #feature-correct answer
-def feat_corr():
+'''
+feat_corrN()，N是1-3
+'''
+def feat_corr1():
     feat_corrMSG = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
@@ -434,6 +475,10 @@ def feat_corr3():
 
 
 #feature-incorrect answer
+'''
+feat_incorr()
+'''
+
 def feat_incorr():
     feat_incorrMSG = TemplateSendMessage(
         alt_text='Buttons template',
@@ -485,6 +530,9 @@ def feat_incorr3():
 
 
 #explanation
+'''
+explainN()，N是1-3
+'''
 def explain():
     explainMSG = TemplateSendMessage(
     alt_text='Carousel template',
