@@ -37,71 +37,71 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 
 def prettyEcho0(event):
-    banana = event.message.text
-    if "開始挑戰" in banana:
+    input_string = event.message.text
+    if "開始挑戰" in input_string:
         message = startaction()
-    elif "第一題" in banana:
-        message = prettyEcho1(banana)
-    elif "第二題" in banana:
-        message = prettyEcho2(banana)
-    elif "第三題" in banana:
-        message = prettyEcho3(banana)
+    elif "第一題" in input_string:
+        message = prettyEcho1(input_string)
+    elif "第二題" in input_string:
+        message = prettyEcho2(input_string)
+    elif "第三題" in input_string:
+        message = prettyEcho3(input_string)
     line_bot_api.reply_message(event.reply_token, message)
 
-def prettyEcho1(banana):
-    #banana=event.message.text
+def prettyEcho1(input_string):
+    #input_string=event.message.text
 
-    if "第一題答對！！" in banana:
+    if "第一題答對！！" in input_string:
         message = corr_answer()        
-    elif "第一題答錯嗚嗚..." in banana:
+    elif "第一題答錯嗚嗚..." in input_string:
         message = incorr_answer()    
-    elif "第一題的討厭詭在哪裡咧？！" in banana:
+    elif "第一題的討厭詭在哪裡咧？！" in input_string:
         message = feat()
-    elif "我覺得第一題的討厭詭是 A C D E" in banana:
+    elif "我覺得第一題的討厭詭是 A C D E" in input_string:
         message = feat_corr()
-    elif "我覺得第一題的討厭詭是" in banana:
+    elif "我覺得第一題的討厭詭是" in input_string:
         message = feat_incorr()    
-    elif "第一題的討厭詭快現形吧！" in banana:
+    elif "第一題的討厭詭快現形吧！" in input_string:
         message = explain()
-    elif "第一題結束～～再玩一題" in banana:
+    elif "第一題結束～～再玩一題" in input_string:
         message = news2()
     #line_bot_api.reply_message(event.reply_token, message)
     return message
 
-def prettyEcho2(banana):
-    #banana=event.message.text
+def prettyEcho2(input_string):
+    #input_string=event.message.text
     
-    if "第二題答對！！" in banana:
+    if "第二題答對！！" in input_string:
         message = corr_answer2()
-    elif "第二題答錯嗚嗚..." in banana:
+    elif "第二題答錯嗚嗚..." in input_string:
         message = incorr_answer2()    
-    elif "第二題的討厭詭在哪裡咧？！" in banana:
+    elif "第二題的討厭詭在哪裡咧？！" in input_string:
         message = feat2()
-    elif "我猜第二題的討厭詭是 B C D" in banana:
+    elif "我猜第二題的討厭詭是 B C D" in input_string:
         message = feat_corr2()
-    elif "我猜第二題的討厭詭是" in banana:
+    elif "我猜第二題的討厭詭是" in input_string:
         message = feat_incorr2()    
-    elif "第二題的討厭詭還不現形啊！" in banana:
+    elif "第二題的討厭詭還不現形啊！" in input_string:
         message = explain2()
-    elif "第二題結束～～再玩一題" in banana:
+    elif "第二題結束～～再玩一題" in input_string:
         message = news3()
     #line_bot_api.reply_message(event.reply_token, message)
     return message
 
-def prettyEcho3(banana):
-    #banana=event.message.text
+def prettyEcho3(input_string):
+    #input_string=event.message.text
     
-    if "第三題答對！！" in banana:
+    if "第三題答對！！" in input_string:
         message = corr_answer3()
-    elif "第三題答錯嗚嗚..." in banana:
+    elif "第三題答錯嗚嗚..." in input_string:
         message = incorr_answer3()    
-    elif "第三題的討厭詭在哪裡咧？！" in banana:
+    elif "第三題的討厭詭在哪裡咧？！" in input_string:
         message = feat3()
-    elif "第三題的討厭詭應該是 A B C E" in banana:
+    elif "第三題的討厭詭應該是 A B C E" in input_string:
         message = feat_corr3()
-    elif "第三題的討厭詭應該是" in banana:
+    elif "第三題的討厭詭應該是" in input_string:
         message = feat_incorr3()    
-    elif "出來吧！第三題的討厭詭" in banana:
+    elif "出來吧！第三題的討厭詭" in input_string:
         message = explain3()   
     else:
         message = TextSendMessage(text="很抱歉...我聽不懂啊～～")
