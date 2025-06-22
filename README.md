@@ -3,7 +3,7 @@
 
 ## 專案說明
 - 討厭詭圖鑑是一個 LINE 聊天機器人，透過觀察真假訊息，從中找出相關的語言學特徵。
-<img src="https://chat.openai.com/share/static/malicious-bot-demo.gif" width=30%>
+<img src="https://chat.openai.com/share/static/malicious-bot-demo.gif" width="30%">
 
 - 歡迎成為討厭詭圖鑑的好友！
 
