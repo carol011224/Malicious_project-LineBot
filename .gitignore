@@ -1,4 +1,20 @@
+# 環境變數檔案
 .env
+
+# 實驗標記資料夾
 markers/
+
+# 資料與模型
 data/
+ckip-data/
+
+# 虛擬環境
 maliciousbotvenv/
+venv/
+
+# Python 中間產物
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
